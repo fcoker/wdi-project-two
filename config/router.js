@@ -12,12 +12,18 @@ router.get('/', function(req, res) {
 // Render the index page when user requests index route
 router.get('/circuits', circuitController.indexRoute);
 
+// NEW Route: This must appear
+// above the show route, otherwise the show route
+// will load with id = 'new'
+router.get('/circuits/new', circuitController.newRoute);
+
 
 // SHOW Route
 router.get('/circuits/:id', circuitController.showRoute);
 
 // UPDATE route
-router.put('/circuits/:id', circuitController.updateRoute);
+router.put('/circuit/:id',circuitController.updateRoute);
+
 
 // EDIT route
 router.get('/circuits/:id/edit', circuitController.editRoute);

@@ -23,6 +23,18 @@ function showRoute(req, res) {
     res.render('circuits/show', result);
   });
 }
+//this route renders the create form to the user
+function newRoute(req, res) {
+  console.log('we are in create Route');
+  res.render('circuits/new');
+}
+//this route does the actual creation of the circuit and redirects to the show page
+function createRoute(req, res) {
+  Circuit.create(req.body)
+    .then(result => res.redirect(`/circuits/${result._id}`));
+}
+
+
 //This function/route works when the user has submitted his/her edit form
 function updateRoute(req, res) {
   // req.params.id is the id of the circuit we are trying
@@ -52,5 +64,7 @@ module.exports = {
   indexRoute: indexRoute,
   showRoute: showRoute,
   updateRoute: updateRoute,
-  editRoute: editRoute
+  editRoute: editRoute,
+  newRoute: newRoute,
+  createRoute: createRoute
 };
