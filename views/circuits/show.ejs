@@ -16,6 +16,9 @@
     <iframe width="420" height="315"src="<%= video %>">
     </iframe>
   </div>
-  <a href="/circuits/<%= _id %>/edit">EDIT</a>
+  <a href="/circuits/<%= _id %>/edit">EDIT</a>  
+  <form action="/circuits/<%= _id %>?_method=DELETE" method="post">
+  <button class="button">Delete</button>
+  </form>
 
 </main>

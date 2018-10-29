@@ -1,7 +1,7 @@
 // require circuit model containing the circuit schema
 const Circuit = require('../models/circuit');
 
-//INDEX Route call back function defined for use in router
+//INDEX Route call back function!!
 function indexRoute(req, res) {
   console.log('we made it to the controller');
   // Find all the circuits, then render an ejs file:
@@ -14,7 +14,8 @@ function indexRoute(req, res) {
     res.render('circuits/index', circuitObject);
   });
 }
-//SHOW ROUTE
+
+//SHOW ROUTE FUNCTION!!
 function showRoute(req, res) {
   console.log('req.params is', req.params);
   // Get a circuit out of the database, using its ID
@@ -23,18 +24,20 @@ function showRoute(req, res) {
     res.render('circuits/show', result);
   });
 }
+//NEW ROUTE FUNCTION!!
 //this route renders the create form to the user
 function newRoute(req, res) {
   console.log('we are in create Route');
   res.render('circuits/new');
 }
+//CREATE ROUTE FUNCTION!!
 //this route does the actual creation of the circuit and redirects to the show page
 function createRoute(req, res) {
   Circuit.create(req.body)
     .then(result => res.redirect(`/circuits/${result._id}`));
 }
 
-
+//UPDATE ROUTE FUNCTION!!
 //This function/route works when the user has submitted his/her edit form
 function updateRoute(req, res) {
   // req.params.id is the id of the circuit we are trying
@@ -47,6 +50,7 @@ function updateRoute(req, res) {
       res.redirect('/circuits');
     });
 }
+//EDIT ROUTE FUNCTION!!
 //this route is the form that is shown to the user to be filled in
 function editRoute(req, res) {
   // First get the circuit from the database
@@ -58,6 +62,12 @@ function editRoute(req, res) {
       res.render('circuits/edit', result);
     });
 }
+//DELETE ROUTE FUNCTION
+function deleteRoute(req, res){
+  console.log('we are in the delete route');
+  Circuit.findByIdAndDelete(req.params.id)
+    .then(() => res.redirect('/circuits'));
+}
 
 
 module.exports = {
@@ -66,5 +76,6 @@ module.exports = {
   updateRoute: updateRoute,
   editRoute: editRoute,
   newRoute: newRoute,
-  createRoute: createRoute
+  createRoute: createRoute,
+  deleteRoute: deleteRoute
 };

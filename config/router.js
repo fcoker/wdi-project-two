@@ -8,6 +8,11 @@ router.get('/', function(req, res) {
 
   res.render('home');
 });
+//Render the about file when aboute route is requested
+router.get('/about', function(req, res) {
+
+  res.render('about');
+});
 
 // Render the index page when user requests index route
 router.get('/circuits', circuitController.indexRoute);
@@ -27,5 +32,8 @@ router.put('/circuit/:id',circuitController.updateRoute);
 
 // EDIT route
 router.get('/circuits/:id/edit', circuitController.editRoute);
+
+// DELETE Route
+router.delete('/circuits/:id', circuitController.deleteRoute);
 
 module.exports = router;
