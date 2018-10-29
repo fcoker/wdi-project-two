@@ -1,18 +1,25 @@
+const mongoose = require('mongoose');
+const env = require('../config/environment');
+mongoose.connect(env.dbUri);
+
+const Circuit = require('../models/circuit');
+
+Circuit.collection.drop();
 
 const circuitData = [
   {
     name: 'Silverstone Circuit',
     lapLength: '3.66 miles',
-    fastestLap: '1.29.243',
-    numberOfCorners: '18',
+    fastestLap: 1.29,
+    numberOfCorners: 18,
     image: 'http://www.felixracing.se/wp-content/uploads/2014/04/Silverstone-map.jpg',
     video: 'https://duckduckgo.com/?q=silverstone+flying+lap&t=h_&iar=videos&iax=videos&ia=videos&iai=AaSz8JsCWiU'
   },
   {
     name: 'Brands Hatch Circuit',
     lapLength: '2.433 miles',
-    fastestLap: '1:13:860',
-    numberOfCorners: '9',
+    fastestLap: 1.13,
+    numberOfCorners: 9,
     image: 'https://www.motorsportdays.com/wp-content/uploads/2015/03/Brands-Hatch2.png',
     video: 'https://www.youtube.com/watch?v=l_CYWTRPO0M'
 
@@ -20,10 +27,17 @@ const circuitData = [
   {
     name: 'Knockhill International Circuit',
     lapLength: '1.3 miles',
-    fastestLap: '0:42.940',
-    numberOfCorners: '9',
+    fastestLap: 0.42,
+    numberOfCorners: 9,
     image: 'http://www.motorsportcircuits.co.uk/assets/images/knockhill_track.gif',
     video: 'https://www.youtube.com/watch?v=p2-a269OrHI'
 
   }
 ];
+
+Circuit
+  .create(circuitData)
+  .then(circuits => {
+    console.log(`${circuits.length} circuits made!`);
+    mongoose.connection.close();
+  });
