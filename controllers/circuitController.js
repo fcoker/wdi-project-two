@@ -13,10 +13,44 @@ function indexRoute(req, res) {
     };
     res.render('circuits/index', circuitObject);
   });
-
+}
+//SHOW ROUTE
+function showRoute(req, res) {
+  console.log('req.params is', req.params);
+  // Get a circuit out of the database, using its ID
+  // Get a particular circuit then render an ejs file
+  Circuit.findById(req.params.id).then(result => {
+    res.render('circuits/show', result);
+  });
+}
+//This function/route works when the user has submitted his/her edit form
+function updateRoute(req, res) {
+  // req.params.id is the id of the circuit we are trying
+  // to update
+  console.log(`Updating circuit id ${req.params.id}`, req.body);
+  // Let's update the database using the model and the new data:
+  Circuit.findByIdAndUpdate(req.params.id, req.body)
+    .then(() => {
+      // Redirect to the index
+      res.redirect('/circuits');
+    });
+}
+//this route is the form that is shown to the user to be filled in
+function editRoute(req, res) {
+  // First get the circuit from the database
+  // findById returns an object, so we can hand it straight
+  // into the EJS file.
+  console.log('we are in editRoute');
+  Circuit.findById(req.params.id)
+    .then(result => {
+      res.render('circuits/edit', result);
+    });
 }
 
 
 module.exports = {
-  indexRoute: indexRoute
+  indexRoute: indexRoute,
+  showRoute: showRoute,
+  updateRoute: updateRoute,
+  editRoute: editRoute
 };

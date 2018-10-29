@@ -1,0 +1,27 @@
+<form action="/circuits/<%= _id %>?_method=PUT" method="post">
+  <div class="control">
+    <label for="name">Name:</label>
+    <input name="name" value="<%= name %>" id="name" placeholder="e.g. Circuit Name">
+  </div>
+  <div class="control">
+    <label for="lapLength">Lap Length:</label>
+    <input name="lapLength" value="<%= lapLength %>" id="lapLength" placeholder="Lap length in miles">
+  </div>
+  <div class="control">
+    <label for="fastestLap">Fastest Lap:</label>
+    <input name="fastestLap" value="<%= fastestLap %>" id="fastestLap" placeholder="Fastest Lap Time">
+  </div>
+  <div class="control">
+    <label for="numberOfCorners">Number Of Corners:</label>
+    <input name="numberOfCorners" value="<%= numberOfCorners %>" id="numberOfCorners" placeholder="Number Of Corners">
+  </div>
+  <div class="control">
+    <label for="name">Image (URL)</label>
+    <input name="image" value="<%= image %>" id="name" placeholder="URL Website">
+  </div>
+  <div class="control">
+    <label for="video">Flying Lap</label>
+    <input name="video" value="<%= video %>" id="video" placeholder="URL for Flying Lap">
+  </div>
+  <button>Update my circuit!</button>
+</form>

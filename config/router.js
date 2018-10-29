@@ -12,4 +12,14 @@ router.get('/', function(req, res) {
 // Render the index page when user requests index route
 router.get('/circuits', circuitController.indexRoute);
 
+
+// SHOW Route
+router.get('/circuits/:id', circuitController.showRoute);
+
+// UPDATE route
+router.put('/circuits/:id', circuitController.updateRoute);
+
+// EDIT route
+router.get('/circuits/:id/edit', circuitController.editRoute);
+
 module.exports = router;
