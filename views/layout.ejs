@@ -5,28 +5,41 @@
   <head>
     <meta charset="utf-8">
     <title>Circuits Check</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
   </head>
 
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/">Home</a></li>
-          <li><a href="/circuits">Circuits</a></li>
-          <li><a href="/circuits/new">Add a Circuit</a></li>
-          <li><a href="/login">Log In</a></li>
-          <li><a href="/logout">Sign Out</a></li>
-          <li><a href="/register">Register</a></li>
-        </ul>
+      <nav class="navbar">
+        <div class='navbar-start'>
+          <a class='navbar-item' href="/">Home</a>
+        </div>
+          <div>
+            <a class='navbar-item' href="/about">About</a>
+          </div>
+          <div>
+            <a class='navbar-item' href="/circuits">Circuits</a>
+          </div>
+          <div>
+            <a class='navbar-item' href="/circuits/new">Add a Circuit</a>
+          </div>
+          <div>
+            <a class='navbar-item' href="/login">Log In</a>
+          </div>
+          <div>
+            <a class='navbar-item' href="/register">Register</a>
+          </div>
+          <div class='navbar-end'>
+            <a class='navbar-item' href="/logout">Sign Out</a>
+          </div>
       </nav>
     </header>
 
 
-
     <%- body %>
 
-    <footer>
+    <footer class='footer'>
       <p>Contact Us</p>
     </footer>
 

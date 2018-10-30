@@ -31,26 +31,24 @@ function loginRoute(req, res) {
   // Check for an existing user
   User.findOne({ email: req.body.email })
     .then(result => {
-      // Hopefully, result contains a user
+      // Result should contain a user
       if (!result) {
         // If there is no user
         res.redirect('/login');
       } else {
-        // We've found a user in the database! Write the user's
+        // user has been found in the database! Write the user's
         // ID into their locker (session).
         // (req.session is the locker)
         req.session.userId = result._id;
         res.redirect('/');
       }
     });
-  // Validate the password
-  // Write their id into req.session
-  // Otherwise redirect to login form
 }
 
 function logoutRoute(req, res) {
   // Clear the data in the current session
   req.session.regenerate(function() {
+    console.log('--->user is logged out!!<----');
     res.redirect('/');
   });
 }

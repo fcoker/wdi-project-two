@@ -14,6 +14,8 @@ const auth = require('./lib/auth');
 mongoose.connect(env.dbUri);
 //save the express app as the app variable
 const app = express();
+app.use(express.static('public'));
+
 app.use(methodOverride('_method'));
 
 app.use(session({ secret: 'cars', resave: false, saveUninitialized: false }));
@@ -24,8 +26,8 @@ app.use(expressLayouts);
 //test app is listening on port
 // this is to get the form data into req.body
 app.use(bodyParser.urlencoded({ extended: true }));
-//activating the router in my app.js
 app.use(auth.checkAuthStatus);
+//activating the router in my app.js(should always be at the bottom!!!)
 app.use(router);
 
 // Respond to all requests, any method, any url:

@@ -3,11 +3,11 @@ const Circuit = require('../models/circuit');
 
 //INDEX Route call back function!!
 function indexRoute(req, res) {
-  console.log('we made it to the controller');
+  // console.log('we made it to the indexRoute function');
   // Find all the circuits, then render an ejs file:
   // Find returns an array
   Circuit.find().then(function(result) {
-    console.log('this is the result', result);
+    // console.log('this is the result of all circuits found in my indexRoute function', result);
     const circuitObject = {
       circuits: result
     };
@@ -17,7 +17,7 @@ function indexRoute(req, res) {
 
 //SHOW ROUTE FUNCTION!!
 function showRoute(req, res) {
-  console.log('req.params is', req.params);
+  // console.log('req.params is', req.params);
   // Get a circuit out of the database, using its ID
   // Get a particular circuit then render an ejs fileo
   Circuit.findById(req.params.id).then(result => {

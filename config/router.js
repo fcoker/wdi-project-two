@@ -1,4 +1,4 @@
-
+//---> make sure you fix password authentification
 //---> update button not working
 //---> create button not working
 //---> add login, register and log out features with session
