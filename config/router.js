@@ -6,11 +6,25 @@
 //---> add delete button beside comment section to enable username to be able to delete it
 //---> allow only admin log in have access to edit/create and delete
 //---> allow only logged in customers to acces show pages
-
 //---> find out what router is.
-const circuitController = require('../controllers/circuitController');
 
 const router = require('express').Router();
+//CONTOLLER BEING REQUIRED IN ROUTER FILE!!
+const circuitController = require('../controllers/circuitController');
+const authController = require('../controllers/authController');
+const secureRoute = require('../lib/secureRoute');
+
+
+// get explanation as to why registeration route '.get' and '.post' are both using the
+// same url while create route '.get' and '.put' use two different urls
+router.get('/register', authController.registerFormRoute);
+router.post('/register', authController.registerRoute);
+
+router.get('/login', authController.loginFormRoute);
+router.post('/login', authController.loginRoute);
+
+router.get('/logout', authController.logoutRoute);
+
 
 // Render the home file when the user requests the home page
 router.get('/', function(req, res) {
@@ -29,22 +43,22 @@ router.get('/circuits', circuitController.indexRoute);
 // NEW Route: This must appear
 // above the show route, otherwise the show route
 // will load with id = 'new'
-router.get('/circuits/new', circuitController.newRoute);
+router.get('/circuits/new', secureRoute, circuitController.newRoute);
 
 //Create Route
-router.post('/circuits', circuitController.createRoute);
+router.post('/circuits', secureRoute, circuitController.createRoute);
 
 // SHOW Route
 router.get('/circuits/:id', circuitController.showRoute);
 
 // UPDATE route
-router.put('/circuits/:id',circuitController.updateRoute);
+router.put('/circuits/:id', secureRoute,circuitController.updateRoute);
 
 
 // EDIT route
-router.get('/circuits/:id/edit', circuitController.editRoute);
+router.get('/circuits/:id/edit', secureRoute, circuitController.editRoute);
 
 // DELETE Route
-router.delete('/circuits/:id', circuitController.deleteRoute);
+router.delete('/circuits/:id', secureRoute, circuitController.deleteRoute);
 
 module.exports = router;
