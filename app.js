@@ -1,4 +1,3 @@
-
 //requiring necessary external packages to my app JS file
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');

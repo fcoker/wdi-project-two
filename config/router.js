@@ -1,3 +1,12 @@
+
+//---> update button not working
+//---> create button not working
+//---> add login, register and log out features with session
+//---> add comment section and rating for each circuit that shows username of who left it
+//---> add delete button beside comment section to enable username to be able to delete it
+//---> allow only admin log in have access to edit/create and delete
+//---> allow only logged in customers to acces show pages
+
 //---> find out what router is.
 const circuitController = require('../controllers/circuitController');
 
@@ -22,12 +31,14 @@ router.get('/circuits', circuitController.indexRoute);
 // will load with id = 'new'
 router.get('/circuits/new', circuitController.newRoute);
 
+//Create Route
+router.post('/circuits', circuitController.createRoute);
 
 // SHOW Route
 router.get('/circuits/:id', circuitController.showRoute);
 
 // UPDATE route
-router.put('/circuit/:id',circuitController.updateRoute);
+router.put('/circuits/:id',circuitController.updateRoute);
 
 
 // EDIT route
