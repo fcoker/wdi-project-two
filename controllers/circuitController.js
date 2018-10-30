@@ -19,7 +19,7 @@ function indexRoute(req, res) {
 function showRoute(req, res) {
   console.log('req.params is', req.params);
   // Get a circuit out of the database, using its ID
-  // Get a particular circuit then render an ejs file
+  // Get a particular circuit then render an ejs fileo
   Circuit.findById(req.params.id).then(result => {
     res.render('circuits/show', result);
   });

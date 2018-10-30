@@ -13,6 +13,7 @@ const router = require('express').Router();
 const circuitController = require('../controllers/circuitController');
 const authController = require('../controllers/authController');
 const secureRoute = require('../lib/secureRoute');
+const commentsController = require('../controllers/commentsController');
 
 
 // get explanation as to why registeration route '.get' and '.post' are both using the
@@ -24,6 +25,9 @@ router.get('/login', authController.loginFormRoute);
 router.post('/login', authController.loginRoute);
 
 router.get('/logout', authController.logoutRoute);
+//routes for the delete and create comments
+router.post('/circuits/:id/comments', commentsController.commentsCreate);
+router.delete('/circuits/:circuitId/comments/:commentId', commentsController.commentsDelete);
 
 
 // Render the home file when the user requests the home page

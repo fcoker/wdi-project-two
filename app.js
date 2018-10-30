@@ -25,8 +25,8 @@ app.use(expressLayouts);
 // this is to get the form data into req.body
 app.use(bodyParser.urlencoded({ extended: true }));
 //activating the router in my app.js
+app.use(auth.checkAuthStatus);
 app.use(router);
 
 // Respond to all requests, any method, any url:
-app.use('*', auth.checkAuthStatus);
 app.listen(env.port, () => console.log(`Express is listening on port ${env.port}`));

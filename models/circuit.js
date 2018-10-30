@@ -8,7 +8,11 @@ const circuitSchema = mongoose.Schema({
   fastestLap: Number,
   numberOfCorners: Number,
   image: String,
-  video: String
+  video: String,
+  comments: [{
+    username: String,
+    content: String
+  }]
 });
 // saving the circuitSchema as a model called 'Circuit' into a variable named circuitModel
 const circuitModel = mongoose.model('Circuit', circuitSchema);

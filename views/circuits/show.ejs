@@ -16,9 +16,32 @@
     <iframe width="420" height="315"src="<%= video %>">
     </iframe>
   </div>
-  <a href="/circuits/<%= _id %>/edit">EDIT</a>  
-  <form action="/circuits/<%= _id %>?_method=DELETE" method="post">
-  <button class="button">Delete</button>
-  </form>
+
+  <% if(locals.isLoggedIn){ %>
+    <a href="/circuits/<%= _id %>/edit">EDIT</a>
+    <form action="/circuits/<%= _id %>?_method=DELETE" method="post">
+      <button class="button">Delete</button>
+    </form>
+
+    <div>
+      <% comments.forEach(comment => { %>
+        <div>
+          <span><%= comment.username %></span>
+          <span><%= comment.content %></span>
+          <form class="delete-comment-button" method="POST" action="/posts/<%= _id %>/comments/<%= comment._id %>?_method=DELETE">
+            <button class="delete-comment-button">Delete comment</button>
+          </form>
+        </div>
+        <% }) %>
+    </div>
+
+    <div>
+      <form method="POST" action="/posts/<%= _id %>/comments">
+        <textarea name="content"></textarea>
+        <input name="username" type="hidden" value="<%= locals.currentUser.username %>"/>
+        <button>Comment on this post</button>
+      </form>
+    </div>
+  <% } %>
 
 </main>
