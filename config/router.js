@@ -1,11 +1,7 @@
 //---> make sure you fix password authentification
-//---> update button not working
-//---> create button not working
-//---> add login, register and log out features with session
-//---> add comment section and rating for each circuit that shows username of who left it
+//---> add rating for each circuit that shows username of who left it
 //---> add delete button beside comment section to enable username to be able to delete it
 //---> allow only admin log in have access to edit/create and delete
-//---> allow only logged in customers to acces show pages
 //---> find out what router is.
 
 const router = require('express').Router();

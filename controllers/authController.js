@@ -11,8 +11,8 @@ function registerRoute(req, res) {
   // Create a new user
   // req.body contains the data from the registration form
   User.create(req.body)
-    .then(result => {
-      console.log('User created', result);
+    .then(() => {
+      // console.log('User created', result);
       // Redirect to the home page
       res.redirect('/');
     });
@@ -26,7 +26,7 @@ function loginFormRoute(req, res) {
 //Login function that actually logs user into web app and then redirects them to homepage
 function loginRoute(req, res) {
   // req.body has the data from the login form
-  console.log('User is logging in', req.body);
+  // console.log('User is logging in', req.body);
   // Process the login.
   // Check for an existing user
   User.findOne({ email: req.body.email })

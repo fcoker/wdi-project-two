@@ -1,20 +1,26 @@
-<main>
-
-  <h1><%= name %></h1>
-  <img class="show-image" src="<%= image %>"/>
-  <p>Lap Length:
-    <%= lapLength %>
-  </p>
-  <p>Number Of Corners:
-    <%= numberOfCorners %>
-  </p>
-  <p>Fastest Lap Time:
-    <%= fastestLap %>
-  </p>
-  <div>
-    <h3>Flying Lap</h3>
-    <iframe width="420" height="315"src="<%= video %>">
-    </iframe>
+<main class="show-container">
+  <h1 class="showH1 title columns is-centered"><%= name %></h1>
+  <div class="columns is-multiline is-centered">
+    <div class="column is-6">
+      <img class="show-image" src="<%= image %>"/>
+    </div>
+    <div class="column is-6">
+      <h2>Track Details</h2>
+      <p>Lap Length:
+        <%= lapLength %>
+      </p>
+      <p>Number Of Corners:
+        <%= numberOfCorners %>
+      </p>
+      <p>Fastest Lap Time:
+        <%= fastestLap %>
+      </p>
+    </div>
+    <div>
+      <h2>Flying Lap</h2>
+      <iframe width="420" height="315"src="<%= video %>">
+      </iframe>
+    </div>
   </div>
 
   <% if(locals.isLoggedIn){ %>
@@ -28,7 +34,7 @@
         <div>
           <span><%= comment.username %></span>
           <span><%= comment.content %></span>
-          <form class="delete-comment-button" method="POST" action="/posts/<%= _id %>/comments/<%= comment._id %>?_method=DELETE">
+          <form class="delete-comment-button" method="POST" action="/circuits/<%= _id %>/comments/<%= comment._id %>?_method=DELETE">
             <button class="delete-comment-button">Delete comment</button>
           </form>
         </div>
@@ -36,7 +42,7 @@
     </div>
 
     <div>
-      <form method="POST" action="/posts/<%= _id %>/comments">
+      <form method="POST" action="/circuits/<%= _id %>/comments">
         <textarea name="content"></textarea>
         <input name="username" type="hidden" value="<%= locals.currentUser.username %>"/>
         <button>Comment on this post</button>

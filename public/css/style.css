@@ -1,3 +1,34 @@
 body{
   background-color: grey;
 }
+
+h1{
+  margin-top: 15px;
+}
+h2{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.indexGridImage{
+  height: 100px;
+  width: 100px;
+}
+
+footer{
+  bottom: 0;
+  width: 100%;
+}
+.show-image{
+  width: 508px;
+  height: 484px;
+  margin-top: 0px;
+}
+
+.showH1{
+  margin-top: 17px;
+}
+/* .indexGridImageDivParent {
+   height: 100%;
+   width: 100%;
+} */
