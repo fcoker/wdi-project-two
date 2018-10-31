@@ -2,7 +2,7 @@
   <h1>List Of Circuits</h1>
   <div class="circuit-grid">
     <% circuits.forEach(circuit => {%>
-      <div class="columns is-multiline is-mobile">
+      <div class="columns is-centered is-mobile">
         <a href="/circuits/<%= circuit.id %>" class='column is-half-desktop is-4-tablet is-6-mobile'>
           <img width="200px" height="200px" src="<%= circuit.image %>" />
           <h3><%= circuit.name %></h3>

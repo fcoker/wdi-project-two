@@ -13,7 +13,7 @@ const circuitData = [
     fastestLap: 1.29,
     numberOfCorners: 18,
     image: 'http://www.felixracing.se/wp-content/uploads/2014/04/Silverstone-map.jpg',
-    video: 'https://duckduckgo.com/?q=silverstone+flying+lap&t=h_&iar=videos&iax=videos&ia=videos&iai=AaSz8JsCWiU'
+    video: 'http://duckduckgo.com/?q=silverstone+flying+lap&t=h_&iar=videos&iax=videos&ia=videos&iai=AaSz8JsCWiU'
   },
   {
     name: 'Brands Hatch Circuit',
@@ -21,7 +21,7 @@ const circuitData = [
     fastestLap: 1.13,
     numberOfCorners: 9,
     image: 'https://www.motorsportdays.com/wp-content/uploads/2015/03/Brands-Hatch2.png',
-    video: 'https://www.youtube.com/watch?v=l_CYWTRPO0M'
+    video: 'https://www.youtube.com/embed/l_CYWTRPO0M?controls=1'
 
   },
   {
@@ -30,7 +30,7 @@ const circuitData = [
     fastestLap: 0.42,
     numberOfCorners: 9,
     image: 'http://www.motorsportcircuits.co.uk/assets/images/knockhill_track.gif',
-    video: 'https://www.youtube.com/watch?v=p2-a269OrHI'
+    video: 'https://www.youtube.com/embed/p2-a269OrHI?controls=1'
 
   }
 ];
