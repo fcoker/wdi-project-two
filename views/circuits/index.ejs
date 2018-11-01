@@ -1,13 +1,13 @@
-<div class="indexDivBody">
+<div class="indexDivBody padded-container wide">
   <main>
-    <h1 style="margin-top: 15px" class='title is-18 is-center has-text-centered is-spaced'>List Of Circuits</h1>
+    <h1 class='title is-18 is-center has-text-centered is-spaced'>List Of Circuits</h1>
     <div class="circuit-grid columns is-multiline is-centered">
       <% circuits.forEach(circuit => {%>
-        <div class="column is-4 is-mobile" id="indexGridImageDivParent">
-        <a href="/circuits/<%= circuit.id %>" class='column is-half-desktop is-4-tablet is-6-mobile'>
-        <img id="indexGridImage" src="<%= circuit.image %>" />
-        <h3><%= circuit.name %></h3>
-        </a>
+        <div class="column is-4 is-mobile center" id="indexGridImageDivParent">
+          <a href="/circuits/<%= circuit.id %>">
+            <img id="indexGridImage" src="<%= circuit.image %>" />
+          <h3><%= circuit.name %></h3>
+          </a>
         </div>
         <% }) %>
       </div>

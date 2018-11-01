@@ -16,22 +16,18 @@
         <div class='navbar-start'>
           <a class='navbar-item' href="/">Home</a>
         </div>
-            <a class='navbar-item' href="/about">About</a>
-            <a class='navbar-item' href="/circuits">Circuits</a>
-          <% if(!locals.isLoggedIn){ %>
-            <a class='navbar-item' href="/register">Register</a>
-            <a class='navbar-item' href="/login">Log In</a>
-          <% } %>
+        <a class='navbar-item' href="/about">About</a>
+        <a class='navbar-item' href="/circuits">Circuits</a>
+        <% if(!locals.isLoggedIn){ %>
+        <a class='navbar-item' href="/register">Register</a>
+        <a class='navbar-item' href="/login">Log In</a>
+        <% } %>
 
-          <% if(locals.isLoggedIn){ %>
-          <div>
-            <a class='navbar-item' href="/circuits/new">Add a Circuit</a>
-          </div>
-
-
-          <div class='navbar-end'>
-            <a class='navbar-item' href="/logout">Sign Out</a>
-          </div>
+        <% if(locals.isLoggedIn){ %>
+        <a class='navbar-item' href="/circuits/new">Add a Circuit</a>
+        <div class='navbar-end'>
+          <a class='navbar-item' href="/logout">Sign Out</a>
+        </div>
         <% } %>
       </nav>
     </header>

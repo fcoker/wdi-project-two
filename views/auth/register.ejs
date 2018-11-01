@@ -1,9 +1,49 @@
-<form  action="/register" method="post" >
-  <label for="username">User Name:</label>
-  <input type="text" name="username" placeholder='e.g Enter User Name'>
-  <label for="email">Email:</label>
-  <input type="email" name="email" placeholder='e.g Enter Email'>
-  <label for="password">Create Password:</label>
-  <input type="text" name="password" placeholder='e.g Enter Password'>
-  <button>Register</button>
-</form>
+<!-- Registration form -->
+<section class="section">
+  <form class="" action="/register" method="post">
+  <div class="container">
+    <div class="section-heading">
+      <h3 class="title is-2">Register</h3>
+      <h4 class="subtitle is-5">Fill Form below</h4>
+    </div>
+    <br>
+
+    <div class="columns">
+      <div class="column is-6 is-offset-3">
+        <div class="box">
+
+          <div class="field">
+            <label class="label">User Name</label>
+            <div class="control">
+              <input class="input" type="text" name="username" placeholder="Username">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input class="input" type="text" name="email" placeholder="Email">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Create Password</label>
+            <div class="control">
+              <input class="input" type="text" name="password"  placeholder="Password">
+            </div>
+          </div>
+
+          <div class="field is-grouped has-text-centered">
+            <div class="control">
+              <button id="formButton" class="button is-link is-large">
+                <span>Submit</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </form>
+</section>

@@ -1,29 +1,70 @@
-<div class="newFormBody">
-  <form action="/circuits" method="post">
-    <div class="control">
-      <label for="name">Name:</label>
-      <input name="name" id="name" placeholder="e.g. Circuit Name">
+<section class="section" id="newForm">
+  <form class="" action="/circuits" method="post">
+  <div class="container">
+    <div class="section-heading">
+      <h3 class="title is-2">Create New Circuit Below</h3>
     </div>
-    <div class="control">
-      <label for="lapLength">Lap Length:</label>
-      <input name="lapLength" id="lapLength" placeholder="Lap length in miles">
+    <br>
+
+    <div class="columns">
+      <div class="column is-6 is-offset-3">
+        <div class="box">
+
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" name="name" placeholder="name of track">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Lap Length</label>
+            <div class="control">
+              <input class="input" type="text" name="lapLength" placeholder="Lap Length">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Fastest Lap</label>
+            <div class="control">
+              <input class="input" type="number" name="fastestLap"  placeholder="fastest lap time">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Number Of Corners</label>
+            <div class="control">
+              <input class="input" type="number" name="numberOfCorners"  placeholder="number of corners">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Image</label>
+            <div class="control">
+              <input class="input" type="text" name="image"  placeholder="enter image URL here">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Flying Lap</label>
+            <div class="control">
+              <input class="input" type="text" name="video"  placeholder="enter video URL here">
+            </div>
+          </div>
+
+          <div class="field is-grouped has-text-centered">
+            <div class="control">
+              <button class="button is-link is-large">Create New Circuit!</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-    <div class="control">
-      <label for="fastestLap">Fastest Lap:</label>
-      <input name="fastestLap" id="fastestLap" placeholder="Fastest Lap Time">
-    </div>
-    <div class="control">
-      <label for="numberOfCorners">Number Of Corners:</label>
-      <input name="numberOfCorners" id="numberOfCorners" placeholder="Number Of Corners">
-    </div>
-    <div class="control">
-      <label for="name">Image (URL)</label>
-      <input name="image" id="name" placeholder="URL Website">
-    </div>
-    <div class="control">
-      <label for="video">Flying Lap</label>
-      <input name="video" id="video" placeholder="URL for Flying Lap">
-    </div>
-    <button>Create New Circuit!</button>
+
+  </div>
   </form>
-</div>
+</section>

@@ -44,7 +44,7 @@ function createRoute(req, res) {
 function updateRoute(req, res) {
   // req.params.id is the id of the circuit we are trying
   // to update
-  console.log(`Updating circuit id ${req.params.id}`, req.body);
+  // console.log(`Updating circuit id ${req.params.id}`, req.body);
   // Let's update the database using the model and the new data:
   Circuit.findByIdAndUpdate(req.params.id, req.body)
     .then(() => {

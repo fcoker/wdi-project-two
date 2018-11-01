@@ -1,27 +1,70 @@
-<form action="/circuits/<%= _id %>?_method=PUT" method="post">
-  <div class="control">
-    <label for="name">Name:</label>
-    <input name="name" value="<%= name %>" id="name" placeholder="e.g. Circuit Name">
+<section class="section" id="newForm">
+  <form action="/circuits/<%= _id %>?_method=PUT" method="post">
+  <div class="container">
+    <div class="section-heading">
+      <h3 class="title is-2">Update Circuit</h3>
+    </div>
+    <br>
+
+    <div class="columns">
+      <div class="column is-6 is-offset-3">
+        <div class="box">
+
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" value="<%= name %>" type="text" name="name" placeholder="name of track">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Lap Length</label>
+            <div class="control">
+              <input class="input" value="<%= lapLength %>" type="text" name="lapLength" placeholder="Lap Length">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Fastest Lap</label>
+            <div class="control">
+              <input class="input" value="<%= fastestLap %>" type="number" name="fastestLap"  placeholder="fastest lap time">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Number Of Corners</label>
+            <div class="control">
+              <input class="input" value="<%= numberOfCorners %>" type="number" name="numberOfCorners"  placeholder="number of corners">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Image</label>
+            <div class="control">
+              <input class="input" value="<%= image %>" type="text" name="image"  placeholder="enter image URL here">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Flying Lap</label>
+            <div class="control">
+              <input class="input" value="<%= video %>" type="text" name="video"  placeholder="enter video URL here">
+            </div>
+          </div>
+
+          <div class="field is-grouped has-text-centered">
+            <div class="control">
+              <button class="button is-link is-large">Update Circuit</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div class="control">
-    <label for="lapLength">Lap Length:</label>
-    <input name="lapLength" value="<%= lapLength %>" id="lapLength" placeholder="Lap length in miles">
-  </div>
-  <div class="control">
-    <label for="fastestLap">Fastest Lap:</label>
-    <input name="fastestLap" value="<%= fastestLap %>" id="fastestLap" placeholder="Fastest Lap Time">
-  </div>
-  <div class="control">
-    <label for="numberOfCorners">Number Of Corners:</label>
-    <input name="numberOfCorners" value="<%= numberOfCorners %>" id="numberOfCorners" placeholder="Number Of Corners">
-  </div>
-  <div class="control">
-    <label for="name">Image (URL)</label>
-    <input name="image" value="<%= image %>" id="name" placeholder="URL Website">
-  </div>
-  <div class="control">
-    <label for="video">Flying Lap</label>
-    <input name="video" value="<%= video %>" id="video" placeholder="URL for Flying Lap">
-  </div>
-  <button>Update my circuit!</button>
-</form>
+  </form>
+</section>
