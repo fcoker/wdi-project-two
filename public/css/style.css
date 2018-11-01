@@ -1,34 +1,74 @@
 body{
   background-color: grey;
 }
+header{
+  height:
+}
+.navbar{
+  height: 86px;
+}
 
 h1{
   margin-top: 15px;
+  font-family: 'Racing Sans One', cursive;
+  text-align: center;
 }
+
 h2{
   font-size: 30px;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 22px;
 }
 
-.indexGridImage{
-  height: 100px;
-  width: 100px;
+#indexGridImage{
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
 }
 
 footer{
   bottom: 0;
   width: 100%;
+  margin-top: 34px;
 }
 .show-image{
   width: 508px;
   height: 484px;
   margin-top: 0px;
+  border-radius: 7px;
+}
+#showImageDiv{
+  text-align: center;
+}
+#showDetailsDiv{
+  text-align: center;
 }
 
+.homeHeaders{
+  margin-bottom: 18px;
+}
+
+.regionDiv{
+  background-color: #F5F5F5;
+  border: solid;
+  width: 199px;
+  margin-bottom: 8px;
+  text-align: center;
+}
 .showH1{
   margin-top: 17px;
 }
-/* .indexGridImageDivParent {
-   height: 100%;
-   width: 100%;
-} */
+body{
+  background-image: url("https://i.imgur.com/LeZEly9.jpg");
+  background-size: cover;
+}
+.newFormBody{
+  height: 600px;
+}
+.aboutPageBody{
+  height: 600px;
+}
+.indexDivBody{
+  height: 600px;
+}

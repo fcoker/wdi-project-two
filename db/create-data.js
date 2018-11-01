@@ -13,7 +13,7 @@ const circuitData = [
     fastestLap: 1.29,
     numberOfCorners: 18,
     image: 'http://www.felixracing.se/wp-content/uploads/2014/04/Silverstone-map.jpg',
-    video: 'http://duckduckgo.com/?q=silverstone+flying+lap&t=h_&iar=videos&iax=videos&ia=videos&iai=AaSz8JsCWiU'
+    video: 'https://www.youtube.com/embed/AaSz8JsCWiU?controls=1'
   },
   {
     name: 'Brands Hatch Circuit',

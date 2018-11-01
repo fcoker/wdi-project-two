@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 
 const circuitSchema = mongoose.Schema({
-  name: String,
+  name: { type: String },
   lapLength: String,
   fastestLap: Number,
   numberOfCorners: Number,

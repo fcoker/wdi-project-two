@@ -1,10 +1,11 @@
 <main class="show-container">
-  <h1 class="showH1 title columns is-centered"><%= name %></h1>
+  <h1 style="font-size: 50px;" class="showH1 title columns is-centered"><%= name %></h1>
   <div class="columns is-multiline is-centered">
-    <div class="column is-6">
+    <div id="showImageDiv" class="column is-6">
+      <h2>Track Layout</h2>
       <img class="show-image" src="<%= image %>"/>
     </div>
-    <div class="column is-6">
+    <div id="showDetailsDiv" class="column is-6">
       <h2>Track Details</h2>
       <p>Lap Length:
         <%= lapLength %>

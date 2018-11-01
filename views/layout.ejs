@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <title>Circuits Check</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
   </head>
 
@@ -15,20 +16,11 @@
         <div class='navbar-start'>
           <a class='navbar-item' href="/">Home</a>
         </div>
-          <div>
             <a class='navbar-item' href="/about">About</a>
-          </div>
-          <div>
             <a class='navbar-item' href="/circuits">Circuits</a>
-          </div>
           <% if(!locals.isLoggedIn){ %>
-          <div>
             <a class='navbar-item' href="/register">Register</a>
-          </div>
-
-          <div>
             <a class='navbar-item' href="/login">Log In</a>
-          </div>
           <% } %>
 
           <% if(locals.isLoggedIn){ %>
@@ -44,8 +36,9 @@
       </nav>
     </header>
 
-
-    <%- body %>
+    <section class="container">
+      <%- body %>
+    </section>
 
     <footer class='footer'>
       <p>Contact Us</p>

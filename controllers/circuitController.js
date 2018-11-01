@@ -6,13 +6,15 @@ function indexRoute(req, res) {
   // console.log('we made it to the indexRoute function');
   // Find all the circuits, then render an ejs file:
   // Find returns an array
-  Circuit.find().then(function(result) {
-    // console.log('this is the result of all circuits found in my indexRoute function', result);
-    const circuitObject = {
-      circuits: result
-    };
-    res.render('circuits/index', circuitObject);
-  });
+  Circuit
+    .find()
+    .then(function(result) {
+      // console.log('this is the result of all circuits found in my indexRoute function', result);
+      const circuitObject = {
+        circuits: result
+      };
+      res.render('circuits/index', circuitObject);
+    });
 }
 
 //SHOW ROUTE FUNCTION!!

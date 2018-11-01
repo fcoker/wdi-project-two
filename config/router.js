@@ -1,8 +1,6 @@
 //---> make sure you fix password authentification
 //---> add rating for each circuit that shows username of who left it
-//---> add delete button beside comment section to enable username to be able to delete it
 //---> allow only admin log in have access to edit/create and delete
-//---> find out what router is.
 
 const router = require('express').Router();
 //CONTOLLER BEING REQUIRED IN ROUTER FILE!!
@@ -28,12 +26,11 @@ router.delete('/circuits/:circuitId/comments/:commentId', commentsController.com
 
 // Render the home file when the user requests the home page
 router.get('/', function(req, res) {
-
   res.render('home');
 });
+
 //Render the about file when aboute route is requested
 router.get('/about', function(req, res) {
-
   res.render('about');
 });
 
