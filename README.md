@@ -36,7 +36,7 @@ Create a platform for reviewing racing circuits that meets the following technic
 
 
 ### Featured Piece of Code no. 1
-I am particularly proud of this piece of code below although it is relatively simple. It allows youtube videos to be embedded straight into HTML tags called Iframe. The youtube URL has to be changed a bit for it to be compatible with the tag. This was used for my videos showing the flying laps.
+I am particularly proud of this piece of code below although it is relatively simple. It allows Youtube videos to be embedded straight into HTML tags called Iframe. The Youtube URL has to be changed a bit for it to be compatible with the tag. This was used for my videos showing the flying laps.
 
 ``` HTML
 <div class="columns is-multiline is-centered">
@@ -85,11 +85,11 @@ This piece of code below toggles which items show on the nav bar depending on wh
 
 ## Wins and Blockers
 
-The biggest win I gained was being able to how all the skills i've learnt so far could actually be used in a professional manner. It is the first time that a project that was made by me could be used in the real world
+The biggest win I gained was being able to see how all the skills I've learnt so far could actually be used in a professional manner. It is the first time that a project that was made by me could be used in the real world
 
 Secondly another win was feeling the gratitude of being able to research and apply code that was taught to me within the course. This boosted my confidence as I actually felt like a developer achieving this.
 
-My biggest blocker was time management. I feel that initially my expectations were overwhelming, and even after cutting down my expectation by more than half i still struggled with delivering a presentable final product within one week.
+My biggest blocker was time management. I feel that initially my expectations were overwhelming, and even after cutting down my expectation by more than half I still struggled with delivering a presentable final product within one week.
 
 
 ## Future Content
